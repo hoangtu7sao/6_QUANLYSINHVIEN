@@ -30,26 +30,30 @@ namespace _6_QUANLYSINHVIEN
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbMaSV = new System.Windows.Forms.Label();
-            this.lbHoTen = new System.Windows.Forms.Label();
-            this.btthem = new System.Windows.Forms.Button();
-            this.btclose = new System.Windows.Forms.Button();
-            this.btclear = new System.Windows.Forms.Button();
-            this.btRight = new System.Windows.Forms.Button();
-            this.btLeft = new System.Windows.Forms.Button();
-            this.btDoubleRight = new System.Windows.Forms.Button();
-            this.DoubleLeft = new System.Windows.Forms.Button();
-            this.txtmasv = new System.Windows.Forms.TextBox();
-            this.txthoten = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btchon = new System.Windows.Forms.Button();
+            this.bttrave = new System.Windows.Forms.Button();
+            this.btchonlist = new System.Windows.Forms.Button();
+            this.bttravelist = new System.Windows.Forms.Button();
             this.lbDSSV = new System.Windows.Forms.Label();
             this.btSearch = new System.Windows.Forms.Button();
+            this.txtsearch = new System.Windows.Forms.TextBox();
             this.lbDSDaChon = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btthem = new System.Windows.Forms.Button();
+            this.btclear = new System.Windows.Forms.Button();
+            this.btclose = new System.Windows.Forms.Button();
+            this.txthoten = new System.Windows.Forms.TextBox();
+            this.lbHoTen = new System.Windows.Forms.Label();
+            this.txtmasv = new System.Windows.Forms.TextBox();
+            this.lbMaSV = new System.Windows.Forms.Label();
+            this.lvdanhsachdachon = new System.Windows.Forms.ListView();
+            this.STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaSV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvdanhsachsv = new System.Windows.Forms.ListView();
+            this.clmSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmMaSV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,16 +66,14 @@ namespace _6_QUANLYSINHVIEN
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Controls.Add(this.btRight, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btLeft, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btDoubleRight, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.DoubleLeft, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btchon, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.bttrave, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btchonlist, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.bttravelist, 3, 6);
             this.tableLayoutPanel1.Controls.Add(this.lbDSSV, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btSearch, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtsearch, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbDSDaChon, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.btthem, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.btclear, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.btclose, 6, 1);
@@ -79,6 +81,8 @@ namespace _6_QUANLYSINHVIEN
             this.tableLayoutPanel1.Controls.Add(this.lbHoTen, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtmasv, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbMaSV, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lvdanhsachdachon, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lvdanhsachsv, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -95,122 +99,45 @@ namespace _6_QUANLYSINHVIEN
             this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 355);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lbMaSV
+            // btchon
             // 
-            this.lbMaSV.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbMaSV.AutoSize = true;
-            this.lbMaSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaSV.Location = new System.Drawing.Point(3, 40);
-            this.lbMaSV.Name = "lbMaSV";
-            this.lbMaSV.Size = new System.Drawing.Size(43, 15);
-            this.lbMaSV.TabIndex = 0;
-            this.lbMaSV.Text = "Mã SV";
-            this.lbMaSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btchon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btchon.Location = new System.Drawing.Point(302, 99);
+            this.btchon.Name = "btchon";
+            this.btchon.Size = new System.Drawing.Size(75, 23);
+            this.btchon.TabIndex = 5;
+            this.btchon.Text = ">";
+            this.btchon.UseVisualStyleBackColor = true;
             // 
-            // lbHoTen
+            // bttrave
             // 
-            this.lbHoTen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbHoTen.AutoSize = true;
-            this.lbHoTen.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoTen.Location = new System.Drawing.Point(197, 40);
-            this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(43, 15);
-            this.lbHoTen.TabIndex = 1;
-            this.lbHoTen.Text = "Họ tên";
-            this.lbHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttrave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bttrave.Location = new System.Drawing.Point(302, 163);
+            this.bttrave.Name = "bttrave";
+            this.bttrave.Size = new System.Drawing.Size(75, 23);
+            this.bttrave.TabIndex = 6;
+            this.bttrave.Text = "<";
+            this.bttrave.UseVisualStyleBackColor = true;
             // 
-            // btthem
+            // btchonlist
             // 
-            this.btthem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btthem.Location = new System.Drawing.Point(399, 36);
-            this.btthem.Name = "btthem";
-            this.btthem.Size = new System.Drawing.Size(75, 23);
-            this.btthem.TabIndex = 2;
-            this.btthem.Text = "Cập nhật";
-            this.btthem.UseVisualStyleBackColor = true;
+            this.btchonlist.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btchonlist.Location = new System.Drawing.Point(302, 227);
+            this.btchonlist.Name = "btchonlist";
+            this.btchonlist.Size = new System.Drawing.Size(75, 23);
+            this.btchonlist.TabIndex = 7;
+            this.btchonlist.Text = ">>";
+            this.btchonlist.UseVisualStyleBackColor = true;
             // 
-            // btclose
+            // bttravelist
             // 
-            this.btclose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btclose.Location = new System.Drawing.Point(595, 36);
-            this.btclose.Name = "btclose";
-            this.btclose.Size = new System.Drawing.Size(75, 23);
-            this.btclose.TabIndex = 3;
-            this.btclose.Text = "Thoát";
-            this.btclose.UseVisualStyleBackColor = true;
-            // 
-            // btclear
-            // 
-            this.btclear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btclear.Location = new System.Drawing.Point(496, 36);
-            this.btclear.Name = "btclear";
-            this.btclear.Size = new System.Drawing.Size(75, 23);
-            this.btclear.TabIndex = 4;
-            this.btclear.Text = "Xóa";
-            this.btclear.UseVisualStyleBackColor = true;
-            // 
-            // btRight
-            // 
-            this.btRight.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btRight.Location = new System.Drawing.Point(302, 99);
-            this.btRight.Name = "btRight";
-            this.btRight.Size = new System.Drawing.Size(75, 23);
-            this.btRight.TabIndex = 5;
-            this.btRight.Text = ">";
-            this.btRight.UseVisualStyleBackColor = true;
-            // 
-            // btLeft
-            // 
-            this.btLeft.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btLeft.Location = new System.Drawing.Point(302, 163);
-            this.btLeft.Name = "btLeft";
-            this.btLeft.Size = new System.Drawing.Size(75, 23);
-            this.btLeft.TabIndex = 6;
-            this.btLeft.Text = "<";
-            this.btLeft.UseVisualStyleBackColor = true;
-            // 
-            // btDoubleRight
-            // 
-            this.btDoubleRight.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btDoubleRight.Location = new System.Drawing.Point(302, 227);
-            this.btDoubleRight.Name = "btDoubleRight";
-            this.btDoubleRight.Size = new System.Drawing.Size(75, 23);
-            this.btDoubleRight.TabIndex = 7;
-            this.btDoubleRight.Text = ">>";
-            this.btDoubleRight.UseVisualStyleBackColor = true;
-            // 
-            // DoubleLeft
-            // 
-            this.DoubleLeft.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DoubleLeft.Location = new System.Drawing.Point(302, 291);
-            this.DoubleLeft.Name = "DoubleLeft";
-            this.DoubleLeft.Size = new System.Drawing.Size(75, 23);
-            this.DoubleLeft.TabIndex = 8;
-            this.DoubleLeft.Text = "<<";
-            this.DoubleLeft.UseVisualStyleBackColor = true;
-            // 
-            // txtmasv
-            // 
-            this.txtmasv.Location = new System.Drawing.Point(100, 35);
-            this.txtmasv.Name = "txtmasv";
-            this.txtmasv.Size = new System.Drawing.Size(91, 20);
-            this.txtmasv.TabIndex = 9;
-            // 
-            // txthoten
-            // 
-            this.txthoten.Location = new System.Drawing.Point(294, 35);
-            this.txthoten.Name = "txthoten";
-            this.txthoten.Size = new System.Drawing.Size(90, 20);
-            this.txthoten.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox3, 2);
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(294, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 20);
-            this.textBox3.TabIndex = 11;
+            this.bttravelist.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bttravelist.Location = new System.Drawing.Point(302, 291);
+            this.bttravelist.Name = "bttravelist";
+            this.bttravelist.Size = new System.Drawing.Size(75, 23);
+            this.bttravelist.TabIndex = 8;
+            this.bttravelist.Text = "<<";
+            this.bttravelist.UseVisualStyleBackColor = true;
             // 
             // lbDSSV
             // 
@@ -235,6 +162,15 @@ namespace _6_QUANLYSINHVIEN
             this.btSearch.Text = "Tìm kiếm";
             this.btSearch.UseVisualStyleBackColor = true;
             // 
+            // txtsearch
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.txtsearch, 2);
+            this.txtsearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtsearch.Location = new System.Drawing.Point(294, 67);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(188, 20);
+            this.txtsearch.TabIndex = 11;
+            // 
             // lbDSDaChon
             // 
             this.lbDSDaChon.AutoSize = true;
@@ -248,26 +184,136 @@ namespace _6_QUANLYSINHVIEN
             this.lbDSDaChon.Text = "Danh sách đã chọn";
             this.lbDSDaChon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // btthem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 3);
-            this.dataGridView1.Location = new System.Drawing.Point(3, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 4);
-            this.dataGridView1.Size = new System.Drawing.Size(285, 253);
-            this.dataGridView1.TabIndex = 15;
+            this.btthem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btthem.Location = new System.Drawing.Point(399, 36);
+            this.btthem.Name = "btthem";
+            this.btthem.Size = new System.Drawing.Size(75, 23);
+            this.btthem.TabIndex = 2;
+            this.btthem.Text = "Cập nhật";
+            this.btthem.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // btclear
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView2, 3);
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(391, 99);
-            this.dataGridView2.Name = "dataGridView2";
-            this.tableLayoutPanel1.SetRowSpan(this.dataGridView2, 4);
-            this.dataGridView2.Size = new System.Drawing.Size(290, 253);
-            this.dataGridView2.TabIndex = 16;
+            this.btclear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btclear.Location = new System.Drawing.Point(496, 36);
+            this.btclear.Name = "btclear";
+            this.btclear.Size = new System.Drawing.Size(75, 23);
+            this.btclear.TabIndex = 4;
+            this.btclear.Text = "Xóa";
+            this.btclear.UseVisualStyleBackColor = true;
+            // 
+            // btclose
+            // 
+            this.btclose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btclose.Location = new System.Drawing.Point(595, 36);
+            this.btclose.Name = "btclose";
+            this.btclose.Size = new System.Drawing.Size(75, 23);
+            this.btclose.TabIndex = 3;
+            this.btclose.Text = "Thoát";
+            this.btclose.UseVisualStyleBackColor = true;
+            // 
+            // txthoten
+            // 
+            this.txthoten.Location = new System.Drawing.Point(294, 35);
+            this.txthoten.Name = "txthoten";
+            this.txthoten.Size = new System.Drawing.Size(90, 20);
+            this.txthoten.TabIndex = 10;
+            // 
+            // lbHoTen
+            // 
+            this.lbHoTen.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbHoTen.AutoSize = true;
+            this.lbHoTen.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHoTen.Location = new System.Drawing.Point(197, 40);
+            this.lbHoTen.Name = "lbHoTen";
+            this.lbHoTen.Size = new System.Drawing.Size(43, 15);
+            this.lbHoTen.TabIndex = 1;
+            this.lbHoTen.Text = "Họ tên";
+            this.lbHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtmasv
+            // 
+            this.txtmasv.Location = new System.Drawing.Point(100, 35);
+            this.txtmasv.Name = "txtmasv";
+            this.txtmasv.Size = new System.Drawing.Size(91, 20);
+            this.txtmasv.TabIndex = 9;
+            // 
+            // lbMaSV
+            // 
+            this.lbMaSV.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMaSV.AutoSize = true;
+            this.lbMaSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaSV.Location = new System.Drawing.Point(3, 40);
+            this.lbMaSV.Name = "lbMaSV";
+            this.lbMaSV.Size = new System.Drawing.Size(43, 15);
+            this.lbMaSV.TabIndex = 0;
+            this.lbMaSV.Text = "Mã SV";
+            this.lbMaSV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lvdanhsachdachon
+            // 
+            this.lvdanhsachdachon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.STT,
+            this.MaSV,
+            this.HoTen});
+            this.tableLayoutPanel1.SetColumnSpan(this.lvdanhsachdachon, 3);
+            this.lvdanhsachdachon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvdanhsachdachon.HideSelection = false;
+            this.lvdanhsachdachon.Location = new System.Drawing.Point(391, 99);
+            this.lvdanhsachdachon.Name = "lvdanhsachdachon";
+            this.tableLayoutPanel1.SetRowSpan(this.lvdanhsachdachon, 4);
+            this.lvdanhsachdachon.Size = new System.Drawing.Size(290, 253);
+            this.lvdanhsachdachon.TabIndex = 17;
+            this.lvdanhsachdachon.UseCompatibleStateImageBehavior = false;
+            this.lvdanhsachdachon.View = System.Windows.Forms.View.Details;
+            // 
+            // STT
+            // 
+            this.STT.Text = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaSV
+            // 
+            this.MaSV.Text = "Mã SV";
+            // 
+            // HoTen
+            // 
+            this.HoTen.Text = "Họ tên";
+            this.HoTen.Width = 160;
+            // 
+            // lvdanhsachsv
+            // 
+            this.lvdanhsachsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmSTT,
+            this.clmMaSV,
+            this.clmHoTen});
+            this.tableLayoutPanel1.SetColumnSpan(this.lvdanhsachsv, 3);
+            this.lvdanhsachsv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvdanhsachsv.HideSelection = false;
+            this.lvdanhsachsv.Location = new System.Drawing.Point(3, 99);
+            this.lvdanhsachsv.Name = "lvdanhsachsv";
+            this.tableLayoutPanel1.SetRowSpan(this.lvdanhsachsv, 4);
+            this.lvdanhsachsv.Size = new System.Drawing.Size(285, 253);
+            this.lvdanhsachsv.TabIndex = 18;
+            this.lvdanhsachsv.UseCompatibleStateImageBehavior = false;
+            this.lvdanhsachsv.View = System.Windows.Forms.View.Details;
+            // 
+            // clmSTT
+            // 
+            this.clmSTT.Text = "STT";
+            this.clmSTT.Width = 40;
+            // 
+            // clmMaSV
+            // 
+            this.clmMaSV.Text = "Mã SV";
+            this.clmMaSV.Width = 80;
+            // 
+            // clmHoTen
+            // 
+            this.clmHoTen.Text = "Họ Tên";
+            this.clmHoTen.Width = 160;
             // 
             // frmQuanLySinhVien
             // 
@@ -279,8 +325,6 @@ namespace _6_QUANLYSINHVIEN
             this.Text = "frmQuanLySinhVien";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,17 +337,23 @@ namespace _6_QUANLYSINHVIEN
         private System.Windows.Forms.Button btthem;
         private System.Windows.Forms.Button btclear;
         private System.Windows.Forms.Button btclose;
-        private System.Windows.Forms.Button btRight;
-        private System.Windows.Forms.Button btLeft;
-        private System.Windows.Forms.Button btDoubleRight;
-        private System.Windows.Forms.Button DoubleLeft;
+        private System.Windows.Forms.Button btchon;
+        private System.Windows.Forms.Button bttrave;
+        private System.Windows.Forms.Button btchonlist;
+        private System.Windows.Forms.Button bttravelist;
         private System.Windows.Forms.TextBox txtmasv;
         private System.Windows.Forms.TextBox txthoten;
         private System.Windows.Forms.Label lbDSSV;
         private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Label lbDSDaChon;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ListView lvdanhsachdachon;
+        private System.Windows.Forms.ColumnHeader STT;
+        private System.Windows.Forms.ColumnHeader MaSV;
+        private System.Windows.Forms.ColumnHeader HoTen;
+        private System.Windows.Forms.ListView lvdanhsachsv;
+        private System.Windows.Forms.ColumnHeader clmSTT;
+        private System.Windows.Forms.ColumnHeader clmMaSV;
+        private System.Windows.Forms.ColumnHeader clmHoTen;
     }
 }
